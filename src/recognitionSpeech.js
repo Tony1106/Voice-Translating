@@ -39,14 +39,17 @@ class Dictaphone extends Component {
     this.handleStop = this.handleStop.bind(this)
 }
 componentWillReceiveProps(nextProps) {
-  this.handleClick(nextProps);
+  if (nextProps.isOn !== this.props.isOn) {
+    this.handleClick(nextProps);
+  }
+
 }
 
 handleClick (nextProps){
   this.setState({
-    isOn: !nextProps,
+    isOn: !nextProps.isOn,
   })
-  if (!nextProps) {this.handleStart()} else  {this.handleStop()};
+  if (!nextProps.isOn) {this.handleStart()} else  {this.handleStop()};
 }
 
 

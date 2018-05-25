@@ -77,7 +77,7 @@ handleTranslate(nextProps) {
     var outputHTML = items.map((item, index) => <div key={index} className="container">
           <img src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png" alt="Avatar" />
           <p>{item}</p>
-          <span className="time-right">11:00</span>
+
         </div>)
 
 

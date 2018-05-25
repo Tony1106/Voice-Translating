@@ -22,9 +22,9 @@ class App extends Component {
 }
 handleClick(){
   this.setState({
-    isOn: true
+    isOn: !this.state.isOn
   })
-  
+
 }
 handleSetting(e){
  this.setState({
@@ -43,7 +43,7 @@ handleSetting(e){
           <div className="handle" />
         </button>
         <Setting onChange= {this.handleSetting}/>
-        <Body isOn = {this.state.isOn} languageInput={this.state.languageInput} languageOutput = {this.state.languageOutput}/>
+        <Body isOn = {!this.state.isOn} languageInput={this.state.languageInput} languageOutput = {this.state.languageOutput}/>
 </div>
     )
   }
